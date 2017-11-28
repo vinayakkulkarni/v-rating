@@ -4,6 +4,7 @@
 
 + This is [on GitHub](https://github.com/vinayakkulkarni/v-rating)  so let me know if I've b0rked it somewhere, give me a star :star: if you like it :beers:
 
++ Demo here -> [💯 Webpackbin Link](https://goo.gl/9itxBq)
 ## Requirements
 
 * [Vue.js](https://vuejs.org/) 2.x
