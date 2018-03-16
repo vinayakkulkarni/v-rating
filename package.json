@@ -1,7 +1,7 @@
 {
     "name": "v-rating",
     "description": "Rating component in Semantic-UI made with VueJS",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": {
         "name": "Vinayak Kulkarni",
         "email": "vinayak.kulkarni@live.com",
