@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Rating v-model="rateMe" type="heart"></Rating>
+    <rating v-model="rateMe" type="heart"></rating>
   </div>
 </template>
 
@@ -9,12 +9,12 @@ import Rating from '../src/v-rating';
 
 export default {
   components: {
-    Rating
+    Rating,
   },
   data() {
-  	return {
-  		rateMe: 0
-  	}
-  }
-}
+    return {
+      rateMe: 0,
+    };
+  },
+};
 </script>
