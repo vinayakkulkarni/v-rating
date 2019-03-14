@@ -39,9 +39,8 @@ module.exports = {
 
   watch: {
     value: function(val, oldVal) {
-      if (val == null) {
-        t.el = document.getElementsByClassName('ui rating');
-        t.el[0].rating('clear rating');
+      if (val === null) {
+        this.el[0].rating('clear rating');
       }
     },
   },
