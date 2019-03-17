@@ -54,7 +54,7 @@
         "rollup-plugin-uglify": "^3.0.0",
         "rollup-plugin-vue": "^4.7.2",
         "vue": "^2.6.9",
-        "vue-template-compiler": "^2.6.8",
+        "vue-template-compiler": "^2.6.9",
         "watchify": "^3.11.1"
     },
     "licenses": [
