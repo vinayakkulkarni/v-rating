@@ -4,7 +4,7 @@
 
 + This is [on GitHub](https://github.com/vinayakkulkarni/v-rating)  so let me know if I've b0rked it somewhere, give me a star :star: if you like it :beers:
 
-+ Demo here -> [💯 Webpackbin Link](https://goo.gl/9itxBq)
++ Demo here -> [💯 Codesandbox Link](http://bit.ly/v-rating)
 ## Requirements
 
 * [Vue.js](https://vuejs.org/) 2.x
@@ -17,6 +17,8 @@ npm install v-rating
 // or
 yarn add v-rating
 ```
+
+CDN: [UNPKG](https://unpkg.com/v-rating/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/v-rating/dist/) (available as `window.VRating`)
 
 ## :white_check_mark: Usage :mortar_board:
 
@@ -32,7 +34,7 @@ import Rating from 'v-rating';
 ## :white_check_mark: Example 1 :four_leaf_clover:
 
 ```html
-<Rating v-model="yourLocalVariable"></Rating>
+<rating v-model="yourLocalVariable" class="huge heart"></rating>
 ```
 
 ```javascript

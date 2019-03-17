@@ -1,7 +1,15 @@
-module.exports = {
-  name: 'v-rating',
+<template>
+  <div
+    class="ui rating"
+    :class="[type]"
+  />
+</template>
 
-  template: '<div class="ui rating" :class="[type]"></div>',
+<script>
+/* eslint-disable no-undef */
+
+export default {
+  name: 'VRating',
 
   props: {
     value: {
@@ -31,24 +39,22 @@ module.exports = {
     },
   },
 
-  data() {
-    return {
-      el: [],
-    };
-  },
+  data: () => ({
+    el: [],
+  }),
 
   watch: {
-    value: function(val, oldVal) {
+    value(val, oldVal) {
       if (val === null) {
-        this.el[0].rating('clear rating');
+        $(this.$el).rating('clear rating');
       }
     },
   },
 
-  mounted: function() {
+  mounted() {
     const t = this;
     t.el = document.getElementsByClassName('ui rating');
-    t.el[0].rating({
+    $(t.$el).rating({
       initialRating: t.initial,
       maxRating: t.max,
       clearable: t.clearable,
@@ -57,4 +63,6 @@ module.exports = {
       },
     });
   },
+
 };
+</script>
