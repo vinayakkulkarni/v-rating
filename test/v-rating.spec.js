@@ -1,5 +1,5 @@
 const Vue = require('vue');
-const VRating = require('../src/v-rating.js');
+const VRating = require('v-rating');
 
 function getComponent(Component, propsData) {
     const Ctor = Vue.extend(Component);
