@@ -18,6 +18,8 @@ npm install v-rating
 yarn add v-rating
 ```
 
+CDN: [UNPKG](https://unpkg.com/v-rating/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/v-rating/dist/) (available as `window.VRating`)
+
 ## :white_check_mark: Usage :mortar_board:
 
 Register the component globally:
