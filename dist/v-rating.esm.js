@@ -1,52 +1,48 @@
 var script = {
   name: 'VRating',
-
   props: {
     value: {
       type: Number,
-      default: 0,
+      "default": 0,
       required: true
     },
     type: {
       type: String,
-      default: 'star',
+      "default": 'star',
       required: false
     },
     clearable: {
       type: Boolean,
-      default: true,
+      "default": true,
       required: false
     },
     max: {
       type: Number,
-      default: 5,
+      "default": 5,
       required: false
     },
     initial: {
       type: Number,
-      default: 0,
+      "default": 0,
       required: false
     }
   },
-
   data: function data() {
     return {
       el: []
     };
   },
-
   watch: {
     value: function value(val, oldVal) {
       if (val === null) {
-        $(this.el[0]).rating('clear rating');
+        $(this.$el).rating('clear rating');
       }
     }
   },
-
   mounted: function mounted() {
     var t = this;
     t.el = document.getElementsByClassName('ui rating');
-    $(t.el[0]).rating({
+    $(t.$el).rating({
       initialRating: t.initial,
       maxRating: t.max,
       clearable: t.clearable,
@@ -101,8 +97,8 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
 
     options._ssrRegister = hook;
   } else if (style) {
-    hook = shadowMode ? function () {
-      style.call(this, createInjectorShadow(this.$root.$options.shadowRoot));
+    hook = shadowMode ? function (context) {
+      style.call(this, createInjectorShadow(context, this.$root.$options.shadowRoot));
     } : function (context) {
       style.call(this, createInjector(context));
     };
@@ -125,28 +121,46 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
   return script;
 }
 
-var normalizeComponent_1 = normalizeComponent;
+/* script */
+const __vue_script__ = script;
 
-var __vue_script__ = script;
-
-var __vue_render__ = function __vue_render__() {
+/* template */
+var __vue_render__ = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "ui rating", class: [_vm.type] });
+  return _c("div", { staticClass: "ui rating", class: [_vm.type] })
 };
 var __vue_staticRenderFns__ = [];
 __vue_render__._withStripped = true;
 
-var __vue_inject_styles__ = undefined;
+  /* style */
+  const __vue_inject_styles__ = undefined;
+  /* scoped */
+  const __vue_scope_id__ = undefined;
+  /* module identifier */
+  const __vue_module_identifier__ = undefined;
+  /* functional template */
+  const __vue_is_functional_template__ = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
 
-var __vue_scope_id__ = undefined;
+  
+  const __vue_component__ = normalizeComponent(
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
+    __vue_inject_styles__,
+    __vue_script__,
+    __vue_scope_id__,
+    __vue_is_functional_template__,
+    __vue_module_identifier__,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
 
-var __vue_module_identifier__ = undefined;
-
-var __vue_is_functional_template__ = false;
-
-
-var VRating = normalizeComponent_1({ render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, undefined, undefined);
-
-export default VRating;
+export default __vue_component__;
