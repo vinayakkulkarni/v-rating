@@ -1,11 +1,23 @@
 module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es6: true,
+    node: true
+  },
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
   extends: [
-    // add more generic rulesets here, such as:
-    // 'eslint:recommended',
-    'plugin:vue/recommended'
+    'plugin:vue/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/vue'
   ],
-  rules: {
-    // override/add rules settings here, such as:
-    // 'vue/no-unused-vars': 'error'
-  }
+  plugins: [
+    'vue',
+    'prettier'
+  ],
+  // add your custom rules here
+  rules: {}
 }
