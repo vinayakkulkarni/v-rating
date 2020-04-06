@@ -1,7 +1,7 @@
 {
   "name": "v-rating",
   "description": "Rating component in Semantic-UI made with VueJS",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "author": {
     "name": "Vinayak Kulkarni",
     "email": "vinayak.kulkarni@live.com",
@@ -10,7 +10,9 @@
   "private": false,
   "main": "dist/v-rating.min.js",
   "module": "dist/v-rating.esm.js",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "keywords": [
     "vuejs",
     "rating",
