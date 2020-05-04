@@ -1,4 +1,5 @@
-# V-Rating :zap: [![Build Status](https://travis-ci.org/vinayakkulkarni/v-rating.svg?branch=master)](https://travis-ci.org/vinayakkulkarni/v-rating) <a href="https://github.com/vinayakkulkarni/v-rating/releases/latest"><img src="https://img.shields.io/github/release/vinayakkulkarni/v-rating.svg" alt="github release"></a> <a href="http://npmjs.org/package/v-rating"><img src="https://img.shields.io/npm/v/v-rating.svg" alt="npm version"></a> <a href="http://npm-stat.com/charts.html?package=v-rating"><img src="https://img.shields.io/npm/dm/v-rating.svg" alt="npm downloads"></a>
+# V-Rating :zap: [![Build Status](https://travis-ci.org/vinayakkulkarni/v-rating.svg?branch=master)](https://travis-ci.org/vinayakkulkarni/v-rating) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating?ref=badge_shield)
+<a href="https://github.com/vinayakkulkarni/v-rating/releases/latest"><img src="https://img.shields.io/github/release/vinayakkulkarni/v-rating.svg" alt="github release"></a> <a href="http://npmjs.org/package/v-rating"><img src="https://img.shields.io/npm/v/v-rating.svg" alt="npm version"></a> <a href="http://npm-stat.com/charts.html?package=v-rating"><img src="https://img.shields.io/npm/dm/v-rating.svg" alt="npm downloads"></a>
 
 + Simple `ui rating` component for Vue made with Semantic-UI.
 
@@ -59,3 +60,6 @@ Vue.component('example-component', {
 ## NPM :octocat:  
 
 [![NPM](https://nodei.co/npm/v-rating.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/v-rating/)
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating?ref=badge_large)
