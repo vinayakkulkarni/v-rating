@@ -45,7 +45,7 @@
     "babel-eslint": "^10.1.0",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
-    "eslint": "^7.10.0",
+    "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-vue": "^2.0.2",
     "eslint-plugin-prettier": "^4.0.0",
