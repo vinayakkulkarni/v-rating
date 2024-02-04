@@ -56,7 +56,7 @@
     "karma-browserify": "^8.0.0",
     "karma-jasmine": "^4.0.0",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-spec-reporter": "^0.0.34",
+    "karma-spec-reporter": "^0.0.36",
     "phantomjs-prebuilt": "^2.1.16",
     "prettier": "^2.0.2",
     "rollup": "^2.3.3",
