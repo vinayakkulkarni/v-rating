@@ -1,0 +1,154 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Fonts (self-hosted, same families as nxui.geoql.in) ─────────── */
+
+@font-face {
+  font-family: 'Clash Display';
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/clash-display-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/satoshi-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/satoshi-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-400.woff2') format('woff2');
+}
+
+/* ── Tokens ──────────────────────────────────────────────────────────
+ * Paper and ink with one accent: a struck-brass amber, the colour of a
+ * lit star. Accent marks the active rating, focus and the score — never
+ * body text. Hearts borrow a warm red for the same job.
+ */
+
+:root {
+  color-scheme: light;
+  --paper: oklch(0.975 0.006 85);
+  --paper-2: oklch(0.95 0.008 85);
+  --ink: oklch(0.21 0.014 260);
+  --ink-2: oklch(0.42 0.014 260);
+  --ink-3: oklch(0.52 0.012 260);
+  --rule: oklch(0.87 0.008 85);
+  --accent: oklch(0.74 0.16 70);
+  --accent-ink: oklch(0.5 0.12 65);
+  --heart: oklch(0.6 0.2 22);
+}
+
+.dark {
+  color-scheme: dark;
+  --paper: oklch(0.17 0.01 260);
+  --paper-2: oklch(0.21 0.012 260);
+  --ink: oklch(0.95 0.008 85);
+  --ink-2: oklch(0.78 0.01 85);
+  --ink-3: oklch(0.66 0.012 260);
+  --rule: oklch(0.32 0.012 260);
+  --accent: oklch(0.8 0.15 75);
+  --accent-ink: oklch(0.84 0.12 80);
+  --heart: oklch(0.68 0.19 22);
+}
+
+@theme {
+  /* Type scale: section headings, the hero score and code samples. */
+  --text-heading: clamp(1.75rem, 4vw, 2.75rem);
+  --text-heading--line-height: 1.05;
+  --text-numeral: clamp(8rem, 28vw, 17rem);
+  --text-numeral--line-height: 0.8;
+  --text-numeral-sub: clamp(2rem, 6vw, 4rem);
+  --text-numeral-sub--line-height: 0.8;
+  --text-code: 0.8125rem;
+  /* Reading measures and layout sizes. */
+  --container-measure: 48ch;
+  --container-headline: 20ch;
+  --container-table: 34rem;
+  --spacing-hero: calc(100dvh - 4rem);
+  --font-sans: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Clash Display', 'Satoshi', ui-sans-serif, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-heart: var(--heart);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+/* ── Fomantic-UI rating, re-tinted with the page tokens ─────────────
+ * Fomantic paints idle icons rgba(0,0,0,.15), which vanishes on the dark
+ * paper. Same selectors, loaded after Fomantic, so the cascade wins
+ * without !important.
+ */
+
+.ui.rating {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.ui.rating .icon {
+  color: var(--rule);
+}
+.ui.rating .active.icon {
+  color: var(--accent);
+}
+.ui.rating .icon.selected,
+.ui.rating .icon.selected.active {
+  color: var(--accent-ink);
+}
+.ui.heart.rating .active.icon,
+.ui.heart.rating .icon.selected,
+.ui.heart.rating .icon.selected.active {
+  color: var(--heart);
+}
+.ui.rating .icon:focus-visible {
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

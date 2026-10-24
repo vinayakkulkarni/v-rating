@@ -1,65 +1,84 @@
-# V-Rating :zap: [![Build Status](https://travis-ci.org/vinayakkulkarni/v-rating.svg?branch=master)](https://travis-ci.org/vinayakkulkarni/v-rating) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating?ref=badge_shield)
-<a href="https://github.com/vinayakkulkarni/v-rating/releases/latest"><img src="https://img.shields.io/github/release/vinayakkulkarni/v-rating.svg" alt="github release"></a> <a href="http://npmjs.org/package/v-rating"><img src="https://img.shields.io/npm/v/v-rating.svg" alt="npm version"></a> <a href="http://npm-stat.com/charts.html?package=v-rating"><img src="https://img.shields.io/npm/dm/v-rating.svg" alt="npm downloads"></a>
+# v-rating
 
-+ Simple `ui rating` component for Vue made with Semantic-UI.
+[![npm](https://img.shields.io/npm/v/v-rating.svg)](https://www.npmjs.com/package/v-rating)
+[![downloads](https://img.shields.io/npm/dm/v-rating.svg)](https://www.npmjs.com/package/v-rating)
+[![license](https://img.shields.io/npm/l/v-rating.svg)](./LICENSE)
 
-+ This is [on GitHub](https://github.com/vinayakkulkarni/v-rating)  so let me know if I've b0rked it somewhere, give me a star :star: if you like it :beers:
+An accessible Vue 3 rating component styled by [Fomantic-UI](https://fomantic-ui.com/modules/rating.html). Stars or hearts, `v-model`, full keyboard support. No jQuery, no Fomantic JavaScript — only its CSS.
 
-+ Demo here -> [💯 Codesandbox Link](http://bit.ly/v-rating)
+**Demo:** [v-rating.vinayakkulkarni.dev](https://v-rating.vinayakkulkarni.dev)
+
 ## Requirements
 
-* [Vue.js](https://vuejs.org/) 2.x
-* [Semantic-UI](https://semantic-ui.com/) 2.x
+- [Vue](https://vuejs.org/) 3.5+
+- [fomantic-ui-css](https://www.npmjs.com/package/fomantic-ui-css) 2.9+ (icon + rating stylesheets)
 
-## :white_check_mark: Install :ok_hand:
+## Install
 
 ```bash
-npm install v-rating
-// or
-yarn add v-rating
+pnpm add v-rating fomantic-ui-css
 ```
 
-CDN: [UNPKG](https://unpkg.com/v-rating/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/v-rating/dist/) (available as `window.VRating`)
+## Usage
 
-## :white_check_mark: Usage :mortar_board:
+```vue
+<script setup lang="ts">
+  import { ref } from 'vue';
+  import { VRating } from 'v-rating';
+  import 'fomantic-ui-css/components/icon.min.css';
+  import 'fomantic-ui-css/components/rating.min.css';
 
-Register the component globally:
-```javascript
-Vue.component('Rating', require('v-rating'));
-```
-Or use locally
-```javascript
-import Rating from 'v-rating';
-```
+  const rating = ref(3);
+</script>
 
-## :white_check_mark: Example 1 :four_leaf_clover:
-
-```html
-<rating v-model="yourLocalVariable" class="huge heart"></rating>
+<template>
+  <VRating v-model="rating" type="heart" :max="5" class="huge" />
+</template>
 ```
 
-```javascript
-Vue.component('example-component', {
-	data() {
-		return {
-			yourLocalVariable: 0,
-		};
-	}
-});
+Register globally instead:
+
+```ts
+import { createApp } from 'vue';
+import { VRatingPlugin } from 'v-rating';
+
+createApp(App).use(VRatingPlugin);
 ```
 
-### :white_check_mark: :book: Props
+Fomantic-UI size classes (`mini` … `massive`) pass straight through `class`.
 
-| Name | Type | Required? | Default | Description |
-| --- | --- | --- | --- | --- |
-| `type` | String | No | `star` | The type of rating component will it be? SUI has `stars` &`heart`. |
-| `clearable` | Boolean | No | `true` | Whether the rating is clearable or not. [Read the SUI Docs on this](https://semantic-ui.com/modules/rating.html#/settings) |
-| `max` | String | No | `5` | A number representing the maximum ratings that can be made available. |
-| `initial` | String | No | `0` | A number representing the default rating to apply. |
+## Props
 
-## NPM :octocat:  
+| Name        | Type                | Default    | Description                                |
+| ----------- | ------------------- | ---------- | ------------------------------------------ |
+| `v-model`   | `number`            | `0`        | The rating. `0` means no rating.           |
+| `type`      | `'star' \| 'heart'` | `'star'`   | Icon set Fomantic-UI styles.               |
+| `max`       | `number`            | `5`        | How many icons to render.                  |
+| `clearable` | `boolean`           | `true`     | Clicking the current value resets it to 0. |
+| `disabled`  | `boolean`           | `false`    | Read-only and out of the tab order.        |
+| `label`     | `string`            | `'Rating'` | Accessible name of the radio group.        |
 
-[![NPM](https://nodei.co/npm/v-rating.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/v-rating/)
+## Events
+
+| Name                | Payload  | When                                   |
+| ------------------- | -------- | -------------------------------------- |
+| `update:modelValue` | `number` | The value changed.                     |
+| `rate`              | `number` | Every pick, even if the value is same. |
+
+## Keyboard
+
+The rating is a `radiogroup` with one tab stop. Arrow keys move the value, Home and End jump to the ends, Enter and Space select (and clear, when `clearable`).
+
+## Development
+
+```bash
+pnpm install
+pnpm run lint && pnpm run format:check && pnpm run typecheck && pnpm run test
+pnpm run build        # the package
+pnpm run build:demo   # the package and the Nuxt demo
+pnpm run deploy       # the demo to Cloudflare Workers
+```
 
 ## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvinayakkulkarni%2Fv-rating?ref=badge_large)
+
+[MIT](./LICENSE) © Vinayak Kulkarni

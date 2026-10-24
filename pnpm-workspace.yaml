@@ -1,0 +1,19 @@
+packages:
+  - 'demo'
+
+# Nuxt 4.5+ runs on unhead v3. Keep one copy on the release that fixed the
+# Cloudflare preset build break (nuxt/nuxt#35670).
+overrides:
+  unhead: '>=3.4.3'
+
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+  sharp: false
+  unrs-resolver: true
+  vue-demi: false
+  workerd: true
+
+minimumReleaseAgeExclude:
+  - '@voidzero-dev/vite-plus-core@1.4.0'
+  - vite-plus@1.4.0

@@ -1,0 +1,27 @@
+{
+  "name": "v-rating-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt build && wrangler dev --config .output/server/wrangler.json",
+    "deploy": "nuxt build && wrangler deploy --config .output/server/wrangler.json",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt prepare && vue-tsc -b --noEmit"
+  },
+  "dependencies": {
+    "@nuxtjs/color-mode": "^4.0.1",
+    "fomantic-ui-css": "^2.9.4",
+    "nuxt": "^4.6.2",
+    "v-rating": "workspace:*",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.13",
+    "wrangler": "^4.152.0"
+  }
+}

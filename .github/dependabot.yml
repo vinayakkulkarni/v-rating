@@ -1,18 +1,71 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: '23:30'
-  open-pull-requests-limit: 10
-  reviewers:
-  - vinayakkulkarni
-  assignees:
-  - vinayakkulkarni
-  labels:
-  - dependencies
-  commit-message:
-    prefix: fix
-    prefix-development: chore
-    include: scope
+  - package-ecosystem: npm
+    versioning-strategy: increase
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '00:00'
+      timezone: Asia/Calcutta
+    groups:
+      npm-development:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+      npm-production:
+        dependency-type: production
+        update-types:
+          - patch
+    reviewers:
+      - vinayakkulkarni
+    assignees:
+      - vinayakkulkarni
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
+  - package-ecosystem: npm
+    versioning-strategy: increase
+    directory: '/demo'
+    schedule:
+      interval: daily
+      time: '00:00'
+      timezone: Asia/Calcutta
+    groups:
+      npm-development:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+      npm-production:
+        dependency-type: production
+        update-types:
+          - patch
+    reviewers:
+      - vinayakkulkarni
+    assignees:
+      - vinayakkulkarni
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '00:00'
+      timezone: Asia/Calcutta
+    groups:
+      actions-minor:
+        update-types:
+          - minor
+          - patch
+    reviewers:
+      - vinayakkulkarni
+    assignees:
+      - vinayakkulkarni
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
