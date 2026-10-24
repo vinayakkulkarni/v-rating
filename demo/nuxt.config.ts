@@ -53,7 +53,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'v-rating — accessible rating for Vue 3',
+      title: 'v-rating: accessible rating for Vue 3',
       meta: [
         {
           name: 'description',

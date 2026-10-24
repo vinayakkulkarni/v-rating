@@ -62,6 +62,19 @@
 }
 
 @theme {
+  /* Type scale: section headings, the hero score and code samples. */
+  --text-heading: clamp(1.75rem, 4vw, 2.75rem);
+  --text-heading--line-height: 1.05;
+  --text-numeral: clamp(8rem, 28vw, 17rem);
+  --text-numeral--line-height: 0.8;
+  --text-numeral-sub: clamp(2rem, 6vw, 4rem);
+  --text-numeral-sub--line-height: 0.8;
+  --text-code: 0.8125rem;
+  /* Reading measures and layout sizes. */
+  --container-measure: 48ch;
+  --container-headline: 20ch;
+  --container-table: 34rem;
+  --spacing-hero: calc(100dvh - 4rem);
   --font-sans: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Clash Display', 'Satoshi', ui-sans-serif, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;

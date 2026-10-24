@@ -41,6 +41,15 @@
     rating.value >= 1 && rating.value <= icons.value.length ? rating.value : 1,
   );
 
+  /** Per-icon Fomantic-UI classes, built once per state change. */
+  const iconClasses = computed(() =>
+    icons.value.map((value) => ({
+      [props.type]: true,
+      active: value <= rating.value,
+      selected: value <= hovered.value,
+    })),
+  );
+
   function commit(value: number) {
     rating.value = value;
     emit('rate', value);
@@ -96,10 +105,7 @@
       v-for="value in icons"
       :key="value"
       class="icon"
-      :class="[
-        props.type,
-        { active: value <= rating, selected: value <= hovered },
-      ]"
+      :class="iconClasses[value - 1]"
       role="radio"
       :aria-checked="value === rating"
       :aria-label="`${value} of ${icons.length}`"

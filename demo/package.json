@@ -8,7 +8,7 @@
     "preview": "nuxt build && wrangler dev --config .output/server/wrangler.json",
     "deploy": "nuxt build && wrangler deploy --config .output/server/wrangler.json",
     "postinstall": "nuxt prepare",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt prepare && vue-tsc -b --noEmit"
   },
   "dependencies": {
     "@nuxtjs/color-mode": "^4.0.1",

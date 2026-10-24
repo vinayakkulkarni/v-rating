@@ -22,7 +22,7 @@
   useSeoMeta({
     ogType: 'website',
     ogUrl: `${SITE}/`,
-    ogTitle: 'v-rating — accessible rating for Vue 3',
+    ogTitle: 'v-rating: accessible rating for Vue 3',
     ogDescription: DESCRIPTION,
     twitterCard: 'summary',
   });
@@ -91,7 +91,7 @@
     </header>
 
     <main class="flex flex-1 flex-col">
-      <RatingPlayground class="min-h-[calc(100dvh-4rem)]" />
+      <RatingPlayground class="min-h-hero" />
 
       <section
         aria-labelledby="install-title"
@@ -100,11 +100,11 @@
         <div class="lg:col-span-5">
           <h2
             id="install-title"
-            class="font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.05] font-semibold tracking-tight"
+            class="font-display text-heading font-semibold tracking-tight"
           >
             Install
           </h2>
-          <p class="mt-4 max-w-[48ch] leading-relaxed text-ink-2">
+          <p class="mt-4 max-w-measure leading-relaxed text-ink-2">
             The component renders Fomantic-UI markup. Bring the icon and rating
             stylesheets from
             <code class="font-mono text-sm">fomantic-ui-css</code>; no jQuery,
@@ -114,24 +114,22 @@
         <div class="flex min-w-0 flex-col gap-3 lg:col-span-7">
           <CopyCommand :command="INSTALL" />
           <pre
-            class="overflow-x-auto border border-rule bg-paper-2 p-4 font-mono text-[13px] leading-relaxed text-ink-2"
+            class="overflow-x-auto border border-rule bg-paper-2 p-4 font-mono text-code leading-relaxed text-ink-2"
           ><code>{{ USAGE }}</code></pre>
         </div>
 
         <div class="lg:col-span-5">
-          <h2
-            class="font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.05] font-semibold tracking-tight"
-          >
+          <h2 class="font-display text-heading font-semibold tracking-tight">
             Props
           </h2>
-          <p class="mt-4 max-w-[48ch] leading-relaxed text-ink-2">
+          <p class="mt-4 max-w-measure leading-relaxed text-ink-2">
             Emits <code class="font-mono text-sm">update:modelValue</code> and
             <code class="font-mono text-sm">rate</code>. Arrow keys, Home and
             End move the value; Enter and Space select.
           </p>
         </div>
         <div class="min-w-0 overflow-x-auto lg:col-span-7">
-          <table class="w-full min-w-[34rem] border-collapse text-left text-sm">
+          <table class="w-full min-w-table border-collapse text-left text-sm">
             <thead class="font-mono text-xs text-ink-3">
               <tr class="border-b border-rule">
                 <th class="py-2 pr-4 font-normal">prop</th>

@@ -12,7 +12,7 @@ import type {
  * automation browser, blocked script, GA4 without an ID) is skipped, never
  * an error.
  */
-export function createAnalytics(handles: AnalyticsHandles) {
+function createAnalytics(handles: AnalyticsHandles) {
   function track<E extends AnalyticsEvent>(
     event: E,
     properties: AnalyticsEventMap[E],

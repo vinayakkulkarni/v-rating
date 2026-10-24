@@ -53,25 +53,23 @@
         Current rating
       </p>
       <p
-        class="mt-2 flex items-baseline font-display leading-[0.8] font-semibold tracking-tight"
+        class="mt-2 flex items-baseline font-display font-semibold tracking-tight"
         aria-live="polite"
       >
         <span
-          class="text-[clamp(8rem,28vw,17rem)] tabular-nums"
+          class="text-numeral tabular-nums"
           :class="type === 'heart' ? 'text-heart' : 'text-accent-ink'"
           >{{ rating }}</span
         >
-        <span class="ml-3 text-[clamp(2rem,6vw,4rem)] text-ink-3"
-          >/{{ max }}</span
-        >
+        <span class="ml-3 text-numeral-sub text-ink-3">/{{ max }}</span>
       </p>
       <h1
         id="playground-title"
-        class="mt-8 max-w-[20ch] font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.05] font-semibold tracking-tight"
+        class="mt-8 max-w-headline font-display text-heading font-semibold tracking-tight"
       >
         An accessible rating for Vue 3.
       </h1>
-      <p class="mt-4 max-w-[46ch] leading-relaxed text-ink-2">
+      <p class="mt-4 max-w-measure leading-relaxed text-ink-2">
         Fomantic-UI markup, no jQuery. Click, hover or use the arrow keys —
         <code class="font-mono text-sm">v-model</code> keeps the number in sync.
       </p>
