@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "jsx": "preserve",
+    "noEmit": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "types": ["node"]
+  },
+  "include": ["src", "test"],
+  "exclude": ["node_modules", "dist", "demo"]
+}
