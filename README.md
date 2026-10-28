@@ -6,7 +6,7 @@
 
 An accessible Vue 3 rating component styled by [Fomantic-UI](https://fomantic-ui.com/modules/rating.html). Stars or hearts, `v-model`, full keyboard support. No jQuery, no Fomantic JavaScript — only its CSS.
 
-**Demo:** [v-rating.vinayakkulkarni.dev](https://v-rating.vinayakkulkarni.dev)
+**[Live demo](https://v-rating.vinayakkulkarni.dev?utm_source=github&utm_medium=readme&utm_campaign=v-rating)** · [npm](https://www.npmjs.com/package/v-rating)
 
 ## Requirements
 
@@ -78,6 +78,17 @@ pnpm run build        # the package
 pnpm run build:demo   # the package and the Nuxt demo
 pnpm run deploy       # the demo to Cloudflare Workers
 ```
+
+## More from the author
+
+- [v-spotlight](https://v-spotlight.vinayakkulkarni.dev?utm_source=github&utm_medium=readme&utm_campaign=v-rating) — Vue 3 spotlight overlay for product tours
+- [v-image](https://v-image.vinayakkulkarni.dev?utm_source=github&utm_medium=readme&utm_campaign=v-rating) — Vue 3 file input with image preview
+- [v-github-icon](https://v-github-icon.vinayakkulkarni.dev?utm_source=github&utm_medium=readme&utm_campaign=v-rating) — GitHub Octicons as Vue 3 components
+- [v-intl-listformat](https://v-intl-listformat.vinayakkulkarni.dev?utm_source=github&utm_medium=readme&utm_campaign=v-rating) — tiny Vue 3 component for Intl.ListFormat
+- [nxui](https://nxui.geoql.in?utm_source=github&utm_medium=readme&utm_campaign=v-rating) — animated copy-paste UI components for Vue 3 and Nuxt
+- [shadscan-vue](https://shadscan-vue.geoql.in?utm_source=github&utm_medium=readme&utm_campaign=v-rating) — UI-fundamentals audit for shadcn-vue apps
+
+See every project at [vinayakkulkarni.dev/projects](https://vinayakkulkarni.dev/projects?utm_source=github&utm_medium=readme&utm_campaign=v-rating) and [geoql.in](https://geoql.in?utm_source=github&utm_medium=readme&utm_campaign=v-rating).
 
 ## License
 
