@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/color-mode": "^4.0.1",
     "fomantic-ui-css": "^2.9.4",
-    "nuxt": "^4.6.2",
+    "nuxt": "^4.6.3",
     "v-rating": "workspace:*",
     "vue": "^3.5.44"
   },
