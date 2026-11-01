@@ -11,7 +11,7 @@
     "typecheck": "nuxt prepare && vue-tsc -b --noEmit"
   },
   "dependencies": {
-    "@nuxtjs/color-mode": "^4.0.1",
+    "@nuxtjs/color-mode": "^4.1.0",
     "fomantic-ui-css": "^2.9.4",
     "nuxt": "^4.6.2",
     "v-rating": "workspace:*",
