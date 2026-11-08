@@ -13,9 +13,9 @@
   "dependencies": {
     "@nuxtjs/color-mode": "^4.0.1",
     "fomantic-ui-css": "^2.9.4",
-    "nuxt": "^4.6.2",
+    "nuxt": "^4.6.4",
     "v-rating": "workspace:*",
-    "vue": "^3.5.44"
+    "vue": "^3.5.45"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
